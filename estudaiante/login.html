@@ -258,6 +258,96 @@ section h2::after {
   }
 }
 
+.log{
+    background-color: #f8f8f8;
+    position: relative;
+    height: 370px;
+    width: 450px;
+    border-radius: 50px 5px;
+}
+form{
+    position: absolute;
+    inset: 2px;
+    border-radius: 50px 5px;
+    background-color: #ffffff;
+    z-index: 10;
+    padding: 30px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+}
+form h1{
+    color: #001256;
+    font-size: 35px;
+    font-weight: 500;
+    text-align: center;
+}
+.inputbox{
+    position: relative;
+    width: 300px;
+    margin-top: 35px;
+}
+.inputbox input{
+    position: relative;
+    width: 100%;
+    padding: 20px 10px 10px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #222222;
+    font-size: 1em;
+    letter-spacing: 0.050em;
+    z-index: 10;
+}
+input[type="submit"]{
+    font-size: 20px;
+    width: 100%;
+    border: none;
+    outline: none;
+    background-color: #03bb85;
+    padding: 5px;
+    margin-top: 40px;
+    border-radius: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    color: #f8f8f8;
+}
+input[type="submit"]:active{
+    background: linear-gradient(90deg,#03bb85,#001256);
+    opacity: 0.8;
+    color: #ffffff;
+}
+.inputbox span{
+    position: absolute;
+    padding: 20px;
+    left: 0;
+    font-size: 1em;
+    color: #8f8f8f;
+    pointer-events: none;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+}
+.inputbox input:valid ~ span,
+.inputbox input:focus ~ span{
+    color: #001256;
+    transform: translateX(-10px) translateY(-30px);
+    font-size: 0.85em;
+}
+.inputbox i{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #03bb85;
+    z-index: 9;
+}
+.inputbox input:valid ~i,
+.inputbox input:focus~{
+    height: 44px;
+}
 </style>
 <body>
 
@@ -329,7 +419,33 @@ section h2::after {
       </div>
       <div class="hero-text">
  
-       <--contenedor de logeo-->
+       
+          
+            
+        <!--FORMULARIO-->
+        <div class="log">
+          
+         <form class="">
+              <h1>Inicio de sesión</h1>
+              <div class="inputbox">
+                <input type="text" name="matricula" required="requiered" id="matricula">
+                <span>Matricula</span> 
+                <i></i> 
+              </div>
+              <div class="inputbox">
+                <input type="password" name="contraseña" required="requiered" id="contraseña">
+                <span>Contraseña</span> 
+                <i></i> 
+              </div>
+              <input type="submit" value="Ingresar" id="ingresar" name="ingresar">
+         </form> 
+            
+        </div>
+      
+
+
+
+     </div>
    
   </div>
  
