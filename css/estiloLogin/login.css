@@ -103,7 +103,7 @@ section h2::after {
 /* Para pantallas grandes (por ejemplo, pantallas con un ancho mínimo de 1024 píxeles) */
 @media screen and (min-width: 1024px) {
   .log {
-    min-width: 4500px;
+    min-width: 500px;
     max-width: 480px;
     min-height: 480px;
     max-height: 500px;
