@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Examenes</title>
+    <link rel="stylesheet" type="text/css" href="../css/estiloHeader/header.css">
+    <link rel="stylesheet" type="text/css" href="../css/Docentes/estiloPagExamenes.css">
+</head>
+
+<body>
+
+    <!--------BARRA DE ARRIBA---------->
+    <header style="z-index: 1;">
+        <div class="navb-logo">
+            <a href="../index.html"> <img src="../IMG/sugel.png" alt="Logo"></a>
+        </div>
+    </header>
+
+    <div class="hexagon-container">
+        <div class="hexagon hexagon-top-left"></div>
+        <div class="hexagon hexagon-bottom-right"></div>
+    </div>
+
+    <!----------CONTENIDO------------>
+    <div class="examenes">
+        <div class="imagen">
+            <a href="preguntas.html">
+                <img
+                    src="https://img.freepik.com/vector-gratis/ilustracion-concepto-examenes_114360-1815.jpg?w=2000"></a>
+        </div>
+        <div class="pie">
+            <p><strong>EXAMEN UNIDAD 1</strong></p>
+            <p>Realizado por: </p>
+        </div>
+    </div>
+
+    <button class="boton-agregar"><strong> + </strong></button>
+    <!-------MANDAR A pantalla de crear examen ------------>
+    <div>
+        <button id="boton-popup" class="boton-agregar">+</button>
+        <div id="popup" class="popup">
+            <div class="contenido-popup">
+                <h2>Registro de examen</h2>
+                <div class="form-group">
+                    <br><label for="nombre-materia">Numero de preguntas por habilitar</label>
+                    <br><input type="text" id="nombre-materia" pattern="[0-9]+" title="Ingrese solo números positivos">
+                </div>
+                <div class="form-group">
+                    <br><label for="grupo">Tipo de pregunta:</label>
+                    <label>
+                        <input type="radio" name="estado" value="abierta">
+                        Abierta
+                    </label>
+
+                    <label>
+                        <input type="radio" name="estado" value="cerrada">
+                        Cerrada
+                    </label>
+                </div>
+                <div class="button-group">
+                    <br><button class="btn-guardar">Guardar</button>
+                    <button id="cerrar-popup">Cerrar</button>
+                </div>
+            </div>
+        </div>
+
+
+        <script>
+            var botonPopup = document.getElementById("boton-popup");
+            var popup = document.getElementById("popup");
+            var cerrarPopup = document.getElementById("cerrar-popup");
+
+            botonPopup.addEventListener("click", function () {
+                popup.style.display = "block";
+            });
+
+            cerrarPopup.addEventListener("click", function () {
+                popup.style.display = "none";
+            });
+        </script>
+    </div>
+</body>
+
+</html>
